@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>@ViewBag.Title</title>
+    <meta name="keywords" content="@ViewBag.Keywords" />
+    <meta name="description" content="@ViewBag.Description" />
+    <link href="~/Content/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/Content/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="~/Content/jquery-ui/jquery-ui.min.css" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <div style="height:52px;margin-bottom:10px;">
+        <nav class="navbar navbar-default navbar-fixed-top" style="max-height:52px;">
+            @*navbar-fixed-top*@
+            <div class="container" style="max-height:52px;">
+                <div class="navbar-header" style="width:100%;">
+                    <ul class="nav navbar-nav navbar-left" style="float:left;">
+                        <li>
+                            <a class="navbar-brand" href="http://www.nichaogu.com">
+                                <label style="color:#fff;">一股一十</label>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left hidden-xs" role="search">
+                        @Html.Partial("_SearchPartial")
+                    </form>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content">
+        <div class="visible-xs" role="search">
+            @Html.Partial("_SearchPartial")
+        </div>
+        @RenderBody()
+        <hr />
+        <div style="margin-bottom:30px;width:100%;position:relative;float:right;">
+            <span>&copy;2016 · </span>
+            <span><a href="http://www.nichaogu.com/">一股一十</a> | </span>
+            <span><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备14039095号-4</a></span>
+        </div>
+
+    </div>
+    <script src="~/Scripts/searchPartial.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

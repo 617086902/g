@@ -1,0 +1,31 @@
+﻿<div>
+    <span id="curprice"></span>
+    <span id="curdate"></span>
+</div>
+
+<script>
+    $(function () {
+        var sc = $("#stockCode").val();
+        sc = sc;
+        var rh = getStockData("sh" + sc);
+        if (rh == "undefined") { console.log("err"); }
+        console.log(rh);
+        if (rh.indexOf("FAILED") > 0) {
+            rh = getStockData("sz" + sc);
+            console.log(rh);
+        }
+        rh = rh.subStr(rh.indexOf('"'), rh.length - 2);
+        var arr = rh.split(',');
+        $("#curprice").html(arr[2] + "元");
+        $("#curdate").html(arr[30] + arr[31]);
+        function getStockData(scode) {
+            var resHtml = $.ajax({
+                url: "http://hq.sinajs.cn/list=" + sc,
+                method: "get",
+                async: false,
+
+            }).responseText;
+            return resHtml;
+        }
+    });
+</script>

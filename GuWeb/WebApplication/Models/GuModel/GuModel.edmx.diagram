@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="53990e72b12341688690f3cd70fde39a" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="GuModel.CompanyProfile" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuModel.Stock" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuModel.User" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuModel.UserInformation" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GuModel.Comment" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="GuModel.Post" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="GuModel.UserLike" Width="1.5" PointX="5.375" PointY="8.75" />
+        <EntityTypeShape EntityType="GuModel.UserLevel" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GuModel.UserAccount" Width="1.5" PointX="7.375" PointY="8.75" />
+        <EntityTypeShape EntityType="GuModel.ThirdPartyAccount" Width="1.5" PointX="9.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

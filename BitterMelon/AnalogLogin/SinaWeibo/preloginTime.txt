@@ -1,0 +1,3 @@
+function getprelt(exectime){
+	return 500 - (parseInt(exectime, 10) || 0);
+}

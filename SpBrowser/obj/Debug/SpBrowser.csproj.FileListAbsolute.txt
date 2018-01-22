@@ -1,0 +1,9 @@
+D:\aworkspace\SpBrowser\bin\Debug\SpBrowser.exe.config
+D:\aworkspace\SpBrowser\bin\Debug\SpBrowser.exe
+D:\aworkspace\SpBrowser\bin\Debug\SpBrowser.pdb
+D:\aworkspace\SpBrowser\obj\Debug\SpBrowser.csprojResolveAssemblyReference.cache
+D:\aworkspace\SpBrowser\obj\Debug\SpBrowser.Form1.resources
+D:\aworkspace\SpBrowser\obj\Debug\SpBrowser.Properties.Resources.resources
+D:\aworkspace\SpBrowser\obj\Debug\SpBrowser.csproj.GenerateResource.Cache
+D:\aworkspace\SpBrowser\obj\Debug\SpBrowser.exe
+D:\aworkspace\SpBrowser\obj\Debug\SpBrowser.pdb

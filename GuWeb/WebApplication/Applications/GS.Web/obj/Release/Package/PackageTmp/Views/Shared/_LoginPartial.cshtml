@@ -1,0 +1,50 @@
+﻿@using Core.Entities;
+@{
+    BaseUser user = Core.AppContext.Current.CurrentUser;
+    bool isLogin = user != null;
+}
+@if (isLogin)
+{
+    <ul class="nav navbar-nav navbar-right" style="float:right; max-width:200px;">
+        <li class="dropdown" style="float:right;">
+            <a href="/user/index" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">
+                <img src="@user.UserInformation.ProfilePhoto" style="width:25px;height:25px;float:left;margin-right:10px;" alt="photo" class="img-rounded">
+                <span>@user.UserInformation.Nickname</span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" style="padding:10px;font-size:12px;">
+                <li>
+                    <a href="/user/index" style="background:url(/Content/img/preson.png);background-repeat:no-repeat;height:30px;">
+                        <span>&nbsp;&nbsp;我的主页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user/setting" style="background:url(/Content/img/setting.png);background-repeat:no-repeat;height:25px;">
+                        <span>&nbsp;&nbsp;设置</span>
+                    </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                    <a href="javascript:;" style="background:url(/Content/img/logout.png);background-repeat:no-repeat;" id="logout">
+                        <span>&nbsp;&nbsp;退出</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right" style="float:right; width:135px;">
+        <li>
+            <a class="navbar-brand regist" href="#">
+                <span style="color:#fff;">注册</span>
+            </a>
+        </li>
+        <li>
+            <a class="navbar-brand login" href="#">
+                <span style="color:#fff;">登录</span>
+            </a>
+        </li>
+    </ul>
+}
+<script src="~/Scripts/loginPartial.js"></script>

@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>ftp://qxw1151970042.my3w.com/</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZUONKcJdvkm1QLv6BGhcGAAAAAACAAAAAAAQZgAAAAEAACAAAAAVSYXEM9Tbju0Y9raJfYLFs4sKrpWd8s+H9rz3qf8dlgAAAAAOgAAAAAIAACAAAADoE4ZwQd3CXu7r15VX4HYoz1lvSY3i+b514o7zc0Kc0SAAAABJKogTtS/NYnTHOJYNic9vqwNQlkfI7Ba+6H7pSc6gykAAAAABP3CDstce9LQ8lEJGg5f/gMxr9VqvkYBtixbMbSi/ABFIX6YGSmYlQoec72/V4WXc3aS4v2w65kNVEKWPwKpt</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AppSettings.config">
+      <publishTime>06/29/2016 20:45:30</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/28/2016 22:56:31</publishTime>
+    </File>
+    <File Include="bin/BitterMelon.dll">
+      <publishTime>07/16/2016 22:36:17</publishTime>
+    </File>
+    <File Include="bin/BusinessService.dll">
+      <publishTime>06/29/2016 22:01:14</publishTime>
+    </File>
+    <File Include="bin/CommonService.dll">
+      <publishTime>07/16/2016 22:36:19</publishTime>
+    </File>
+    <File Include="bin/Core.dll">
+      <publishTime>06/26/2016 14:32:01</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/28/2016 18:19:06</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/28/2016 18:19:07</publishTime>
+    </File>
+    <File Include="bin/GS.Web.dll">
+      <publishTime>07/16/2016 22:36:35</publishTime>
+    </File>
+    <File Include="bin/GuModel.dll">
+      <publishTime>06/21/2016 12:45:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/28/2016 22:56:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/28/2016 22:56:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/28/2016 22:56:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>04/28/2016 22:56:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>04/28/2016 22:56:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>04/28/2016 22:56:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>04/28/2016 22:56:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>04/28/2016 22:56:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>04/28/2016 22:56:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>04/28/2016 22:56:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>04/28/2016 22:56:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>04/28/2016 22:56:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/28/2016 22:56:29</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/14/2016 21:30:06</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>04/28/2016 22:56:39</publishTime>
+    </File>
+    <File Include="bin/QConnectSDK.dll">
+      <publishTime>02/05/2012 10:02:39</publishTime>
+    </File>
+    <File Include="bin/RestSharp.dll">
+      <publishTime>01/23/2012 14:07:47</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>04/28/2016 17:13:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>04/28/2016 17:13:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>04/28/2016 17:13:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>04/28/2016 17:13:35</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>04/28/2016 17:13:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/28/2016 22:56:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/28/2016 22:56:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/28/2016 22:56:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/28/2016 22:56:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/28/2016 22:56:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/28/2016 22:56:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/28/2016 22:56:29</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/28/2016 22:56:31</publishTime>
+    </File>
+    <File Include="Content/autocomplete/jquery.autocomplete.css">
+      <publishTime>05/05/2016 00:40:56</publishTime>
+    </File>
+    <File Include="Content/autocomplete/jquery.autocomplete.js">
+      <publishTime>05/05/2016 00:40:56</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/css/bootstrap-theme.css">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/css/bootstrap-theme.css.map">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/css/bootstrap.css">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/css/bootstrap.css.map">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+      <publishTime>05/06/2016 01:50:25</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/js/bootstrap.js">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/bootstrap-3.3.5-dist/js/npm.js">
+      <publishTime>04/29/2016 15:57:07</publishTime>
+    </File>
+    <File Include="Content/css/form-wrapper.css">
+      <publishTime>05/17/2016 17:52:27</publishTime>
+    </File>
+    <File Include="Content/css/guba.css">
+      <publishTime>06/21/2016 16:30:38</publishTime>
+    </File>
+    <File Include="Content/css/user.css">
+      <publishTime>05/19/2016 23:05:20</publishTime>
+    </File>
+    <File Include="Content/Highcharts/highcharts.js">
+      <publishTime>06/22/2016 10:23:13</publishTime>
+    </File>
+    <File Include="Content/img/bg_l.jpg">
+      <publishTime>05/15/2016 22:29:57</publishTime>
+    </File>
+    <File Include="Content/img/Connect_logo_1.png">
+      <publishTime>05/27/2016 00:12:31</publishTime>
+    </File>
+    <File Include="Content/img/logo.png">
+      <publishTime>04/30/2016 19:16:48</publishTime>
+    </File>
+    <File Include="Content/img/logout.png">
+      <publishTime>05/03/2016 16:29:55</publishTime>
+    </File>
+    <File Include="Content/img/niu.png">
+      <publishTime>05/19/2016 22:05:57</publishTime>
+    </File>
+    <File Include="Content/img/preson.png">
+      <publishTime>05/03/2016 16:29:55</publishTime>
+    </File>
+    <File Include="Content/img/repat.png">
+      <publishTime>05/16/2016 18:18:26</publishTime>
+    </File>
+    <File Include="Content/img/setting.png">
+      <publishTime>05/03/2016 16:29:55</publishTime>
+    </File>
+    <File Include="Content/img/xiong.png">
+      <publishTime>05/01/2016 13:01:09</publishTime>
+    </File>
+    <File Include="Content/jquery-ui/jquery-ui.min.css">
+      <publishTime>05/05/2016 22:10:12</publishTime>
+    </File>
+    <File Include="Content/jquery-ui/jquery-ui.min.js">
+      <publishTime>05/05/2016 11:55:23</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/emotion.css">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/emotion.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/0.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/bface.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/cface.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/fface.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/jxface2.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/neweditor-tab-bg.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/tface.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/wface.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/emotion/images/yface.gif">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/formula/formula.css">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/formula/formula.html">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/formula/formula.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/formula/images/formula.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/image/image.css">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/image/image.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/image/images/close.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/image/images/upload1.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/image/images/upload2.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/link/link.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/map/map.html">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/map/map.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/video/images/center_focus.jpg">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/video/images/left_focus.jpg">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/video/images/none_focus.jpg">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/video/images/right_focus.jpg">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/video/video.css">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/dialogs/video/video.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/en.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/addimage.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/alldeletebtnhoverskin.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/alldeletebtnupskin.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/background.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/button.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/copy.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/deletedisable.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/deleteenable.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/imglabel.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/listbackground.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/localimage.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/music.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/rotateleftdisable.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/rotateleftenable.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/rotaterightdisable.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/rotaterightenable.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/en/images/upload.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/zh-cn/images/copy.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/zh-cn/images/imglabel.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/zh-cn/images/localimage.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/zh-cn/images/music.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/zh-cn/images/upload.png">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/lang/zh-cn/zh-cn.js">
+      <publishTime>05/05/2016 23:50:16</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/net/getContent.ashx">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/net/imageUp.ashx">
+      <publishTime>05/06/2016 00:35:26</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/css/umeditor.css">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/css/umeditor.min.css">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/caret.png">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/close.png">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/icons.gif">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/icons.png">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/ok.gif">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/pop-bg.png">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/spacer.gif">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/themes/default/images/videologo.gif">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/jquery.min.js">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/STIXFontLicense2010.txt">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.eot">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.svg">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.ttf">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.woff">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.eot">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.svg">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.ttf">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.woff">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.eot">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.svg">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.ttf">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.woff">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.eot">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.svg">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.ttf">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.woff">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/Symbola.eot">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/Symbola.otf">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/Symbola.svg">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/Symbola.ttf">
+      <publishTime>05/05/2016 23:50:17</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/font/Symbola.woff">
+      <publishTime>05/05/2016 23:50:18</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/mathquill.css">
+      <publishTime>05/05/2016 23:50:18</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/mathquill.js">
+      <publishTime>05/05/2016 23:50:18</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/third-party/mathquill/mathquill.min.js">
+      <publishTime>05/05/2016 23:50:18</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/umeditor.config.js">
+      <publishTime>05/06/2016 00:29:20</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/umeditor.js">
+      <publishTime>05/05/2016 23:50:18</publishTime>
+    </File>
+    <File Include="Content/umeditor1_2_2-utf8-net/umeditor.min.js">
+      <publishTime>05/05/2016 23:50:18</publishTime>
+    </File>
+    <File Include="Content/uploadImg/css/reset.css">
+      <publishTime>05/20/2016 15:14:04</publishTime>
+    </File>
+    <File Include="Content/uploadImg/css/style.css">
+      <publishTime>05/20/2016 17:32:02</publishTime>
+    </File>
+    <File Include="Content/uploadImg/images/logo_n.png">
+      <publishTime>05/20/2016 15:14:04</publishTime>
+    </File>
+    <File Include="Content/uploadImg/images/rpw_back_n.png">
+      <publishTime>05/20/2016 15:14:04</publishTime>
+    </File>
+    <File Include="Content/uploadImg/js/hammer.js">
+      <publishTime>05/20/2016 15:14:03</publishTime>
+    </File>
+    <File Include="Content/uploadImg/js/html5shiv.min.js">
+      <publishTime>05/20/2016 15:14:03</publishTime>
+    </File>
+    <File Include="Content/uploadImg/js/iscroll-zoom.js">
+      <publishTime>05/20/2016 15:14:03</publishTime>
+    </File>
+    <File Include="Content/uploadImg/js/jquery-2.1.1.min.js">
+      <publishTime>05/20/2016 15:14:04</publishTime>
+    </File>
+    <File Include="Content/uploadImg/js/jquery.min.js">
+      <publishTime>05/20/2016 15:14:04</publishTime>
+    </File>
+    <File Include="Content/uploadImg/js/jquery.photoClip.js">
+      <publishTime>05/20/2016 15:14:04</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/30/2016 20:55:40</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/28/2016 22:56:16</publishTime>
+    </File>
+    <File Include="Mail.config">
+      <publishTime>05/26/2016 22:37:30</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/15/2016 20:59:35</publishTime>
+    </File>
+    <File Include="Scripts/guba.js">
+      <publishTime>05/31/2016 21:06:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/28/2016 22:56:20</publishTime>
+    </File>
+    <File Include="Scripts/jsrender.min.js">
+      <publishTime>05/07/2016 14:19:59</publishTime>
+    </File>
+    <File Include="Scripts/login.js">
+      <publishTime>05/26/2016 22:52:51</publishTime>
+    </File>
+    <File Include="Scripts/loginPartial.js">
+      <publishTime>05/08/2016 21:33:08</publishTime>
+    </File>
+    <File Include="Scripts/postdetials.js">
+      <publishTime>06/30/2016 17:40:26</publishTime>
+    </File>
+    <File Include="Scripts/regist.js">
+      <publishTime>05/27/2016 22:49:32</publishTime>
+    </File>
+    <File Include="Scripts/searchPartial.js">
+      <publishTime>05/19/2016 19:42:23</publishTime>
+    </File>
+    <File Include="Scripts/userindex.js">
+      <publishTime>05/28/2016 01:04:53</publishTime>
+    </File>
+    <File Include="Scripts/utilities.js">
+      <publishTime>06/30/2016 17:43:03</publishTime>
+    </File>
+    <File Include="Views/Assist/ChangeLog.cshtml">
+      <publishTime>06/30/2016 20:04:31</publishTime>
+    </File>
+    <File Include="Views/Assist/Error.cshtml">
+      <publishTime>06/21/2016 15:30:23</publishTime>
+    </File>
+    <File Include="Views/Guba/Index.cshtml">
+      <publishTime>06/21/2016 15:48:22</publishTime>
+    </File>
+    <File Include="Views/Guba/PostDetials.cshtml">
+      <publishTime>06/30/2016 17:32:31</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/21/2016 12:44:59</publishTime>
+    </File>
+    <File Include="Views/Home/Test.cshtml">
+      <publishTime>06/16/2016 08:22:15</publishTime>
+    </File>
+    <File Include="Views/MiniBlog/Add.cshtml">
+      <publishTime>06/16/2016 08:28:22</publishTime>
+    </File>
+    <File Include="Views/MiniBlog/Index.cshtml">
+      <publishTime>06/30/2016 19:13:32</publishTime>
+    </File>
+    <File Include="Views/MiniBlog/Login.cshtml">
+      <publishTime>06/20/2016 19:44:03</publishTime>
+    </File>
+    <File Include="Views/MiniBlog/ShowPath.cshtml">
+      <publishTime>07/16/2016 22:10:03</publishTime>
+    </File>
+    <File Include="Views/QQ/CallBack.cshtml">
+      <publishTime>05/28/2016 00:48:49</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>05/05/2016 18:27:00</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>04/28/2016 22:56:36</publishTime>
+    </File>
+    <File Include="Views/Shared/_HotPost.cshtml">
+      <publishTime>06/21/2016 16:29:13</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>06/22/2016 10:25:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>05/22/2016 16:18:42</publishTime>
+    </File>
+    <File Include="Views/Shared/_SearchPartial.cshtml">
+      <publishTime>05/16/2016 20:41:11</publishTime>
+    </File>
+    <File Include="Views/Shared/_StockData.cshtml">
+      <publishTime>05/22/2016 11:45:09</publishTime>
+    </File>
+    <File Include="Views/Stock/AddCompanyProfile.cshtml">
+      <publishTime>06/01/2016 20:14:39</publishTime>
+    </File>
+    <File Include="Views/Stock/AddStocks.cshtml">
+      <publishTime>06/01/2016 20:14:03</publishTime>
+    </File>
+    <File Include="Views/Stock/Index.cshtml">
+      <publishTime>06/01/2016 20:15:30</publishTime>
+    </File>
+    <File Include="Views/Stock/StockList.cshtml">
+      <publishTime>06/21/2016 12:43:27</publishTime>
+    </File>
+    <File Include="Views/Stock/StockSpline.cshtml">
+      <publishTime>06/26/2016 18:34:37</publishTime>
+    </File>
+    <File Include="Views/User/EditProfilePhoto.cshtml">
+      <publishTime>05/20/2016 17:45:00</publishTime>
+    </File>
+    <File Include="Views/User/Index.cshtml">
+      <publishTime>05/28/2016 01:04:56</publishTime>
+    </File>
+    <File Include="Views/User/Login.cshtml">
+      <publishTime>05/28/2016 02:19:54</publishTime>
+    </File>
+    <File Include="Views/User/Regist.cshtml">
+      <publishTime>05/29/2016 16:42:12</publishTime>
+    </File>
+    <File Include="Views/User/Setting.cshtml">
+      <publishTime>05/18/2016 23:17:42</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/28/2016 23:02:26</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/28/2016 22:56:16</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/30/2016 17:34:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

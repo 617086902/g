@@ -1,0 +1,74 @@
+﻿@using Core.Entities;
+@{
+    BaseUser user = Core.AppContext.Current.CurrentUser;
+    ViewBag.Title = "个人中心_一股一十";
+}
+<link href="~/Content/css/user.css" type="text/css" rel="stylesheet" />
+<div class="row m-contain">
+    <div class="col-xs-12 col-sm-3 col-md-2">
+        <a href="editProfilePhoto"><img src="@user.UserInformation.ProfilePhoto" class="img-thumbnail hidden-xs img-md" alt="profile-photo" /></a>
+        <a href="editProfilePhoto"><img src="@user.UserInformation.ProfilePhoto" class="img-thumbnail visible-xs img-xs" alt="profile-photo" /></a>
+    </div>
+    <div class="col-xs-12 col-sm-9 col-md-10">
+        <div class="name">
+            <label>@user.UserInformation.Nickname</label>
+            <a href="javascript:;">编辑资料</a>
+        </div>
+        <div style="margin:20px 5px;color:gray;line-height:24px;">
+            <span>用户等级:<label>@user.ScoreLevel.LevelName</label></span>
+            <br />
+            <span>发帖:<label id="postCount">0</label> | </span>
+            <span>收藏:<label id="likeCount">0</label> | </span>
+            <span>积分:<label>@Convert.ToInt32(user.ScoreLevel.UserScore)</label></span>
+            <br />
+            <span>最后登录时间：@user.UserInformation.LastLoginTime</span>
+            <a class="visible-xs" id="logout-xs" href="javascript:;">退出登录</a>
+        </div>
+    </div>
+</div>
+<div class="m-contain" id="postlist">
+    <div style="border-bottom:1px solid #ccc;">
+        <label>我的帖子</label>
+        <a style="float:right;font-size:13px;color:gray;" href="javascript:;">查看更多</a>
+    </div>
+    <div id="mp">加载中...</div>
+</div>
+<div class="m-contain" id="likepostlist">
+    <div style="border-bottom:1px solid #ccc;">
+        <label>我的收藏</label>
+        <a style="float:right;font-size:13px;color:gray;" href="javascript:;">查看更多</a>
+    </div>
+    <div id="lp">加载中...</div>
+</div>
+<script type="text/x-jsrender" id="postdata">
+    <ul style="list-style:none;margin:0;padding:0;font-size:13px;line-height:25px;">
+        {{for UserPost}}
+        <li>
+            <span>
+                在&nbsp;[<a href="/guba/{{:StockCode}}">{{:GubaName}}吧</a>]
+                &nbsp;发帖&nbsp;&nbsp;
+            </span>
+            <a href="/p/{{:PostId}}">{{:PostTitle}}</a>&nbsp;
+            <span>评论({{:CommentCount}})</span>
+            <span class="showdate hidden-xs">{{:ShowDate}}</span>
+        </li>
+        {{/for}}
+    </ul>
+</script>
+<script type="text/x-jsrender" id="likepostdata">
+    <ul style="list-style:none;margin:0;padding:0;font-size:13px;line-height:25px;">
+        {{for UserPost}}
+        <li>
+            <span>
+                [<a href="/guba/{{:StockCode}}">{{:GubaName}}吧</a>]
+                &nbsp;
+            </span>
+            <a href="/p/{{:PostId}}">{{:PostTitle}}</a>&nbsp;
+            <span>评论({{:CommentCount}})</span>
+            <span class="showdate hidden-xs">{{:ShowDate}}</span>
+        </li>
+        {{/for}}
+    </ul>
+</script>
+<script src="~/Scripts/jsrender.min.js"></script>
+<script src="~/Scripts/userindex.js"></script>

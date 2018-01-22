@@ -1,0 +1,47 @@
+﻿body {
+    font-family: 'Helvetica Neue',Helvetica,'Microsoft YaHei',Arial,sans-serif;
+    /*#f7fafc*/
+}
+
+.logo {
+    background: url(/Content/img/logo.png) no-repeat;
+    display: block;
+    height: 75px;
+    width: 200px;
+    background-size: contain;
+    color: transparent;
+    margin: 30px auto 0;
+    font: 0/0 a;
+}
+
+.h2 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.input-wrapper {
+    line-height: 30px;
+    padding: .8em;
+}
+
+.index-search {
+    width: 100px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border:none;
+    background:#f1eafc;
+    line-height:35px;
+    height:33px;
+    border-radius:4px;
+}
+
+.hottag{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.hottag li{
+    float:left;
+    margin-right:10px;
+}

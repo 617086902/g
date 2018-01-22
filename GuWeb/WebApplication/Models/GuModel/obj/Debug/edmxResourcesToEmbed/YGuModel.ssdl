@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PostId" Type="int" Nullable="false" />
+    <Property Name="ParentCommentId" Type="int" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModifyOn" Type="datetime" />
+    <Property Name="ModifyBy" Type="int" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompanyProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StockCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LegalName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EnglishName" Type="varchar" MaxLength="200" />
+    <Property Name="EstablishDate" Type="datetime" />
+    <Property Name="OwnedIndustry" Type="nvarchar" MaxLength="100" />
+    <Property Name="RegisteredCapital" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IssuePrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EmployeesCount" Type="int" />
+    <Property Name="LegalPerson" Type="nvarchar" MaxLength="100" />
+    <Property Name="Telephone" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Website" Type="varchar" MaxLength="100" />
+    <Property Name="OfficeAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="ListingDate" Type="datetime" />
+    <Property Name="BusinessScope" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Profile" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ListedMarket" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StockCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsBoutique" Type="bit" Nullable="false" />
+    <Property Name="IsTop" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="ModifyOn" Type="datetime" />
+    <Property Name="ModifyBy" Type="int" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StockCode" Type="varchar" MaxLength="100" />
+    <Property Name="StockName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PyFullName" Type="varchar" MaxLength="100" />
+    <Property Name="PyAbbre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCode" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="PassCode" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Nickname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Realname" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProfilePhoto" Type="varchar" MaxLength="200" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="Contry" Type="varchar" MaxLength="100" />
+    <Property Name="Province" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+    <Property Name="LastLoginTime" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="GSModelStoreContainer">
+    <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyProfile" EntityType="Self.CompanyProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInformation" EntityType="Self.UserInformation" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

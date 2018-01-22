@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "股友微博" + ViewBag.d + "_一股一十";
+}
+@model List<TF.BitterMelon.AnalogLogin.SinaWeibo.WeiboDetails>
+<style>
+    .bartop {
+        font-size: 30px;
+        color: #333;
+        margin: 0 5px;
+    }
+</style>
+<hr class="visible-xs" />
+<div style="border-bottom:1px solid #eee;padding-bottom:10px;">
+    <a class="bartop" href="/weibo/@ViewBag.d">股友微博@(ViewBag.d)</a>
+    <span style="margin:0 10px 0 10px;">今日热度：@ViewBag.Hot</span>
+    @if (ViewBag.p != "")
+    {
+        <span><a href="/weibo/@ViewBag.p">查看前一日微博</a></span>
+    }
+    <span style="margin-left:10px;"><a href="/stock/stockSpline">查看微博热度走势图</a></span>
+
+</div>
+<div style="padding:10px;">
+    @if (!Model.Any())
+    {
+        <div style="margin-bottom:20px;line-height:50px;margin-left:10px;">暂无数据！</div>
+    }
+    @foreach (var l in Model)
+    {
+        <div class="row" style="border-bottom:1px solid #eee;padding:10px 0 10px 0">
+            <div class="col-lg-1 col-xs-2">
+                <img src="@l.FaceImg" class="img-rounded" />
+            </div>
+            <div class="col-lg-11 col-xs-10">
+                <span>
+                    <a href="@l.AuthorUrl" rel="external nofollow" target="_blank" style="color:#333;font-weight:bold;">
+                        @l.AuthorNickName
+                    </a>&nbsp;
+                </span>
+                <span>@l.Pubdate</span>&nbsp;
+                <span>@l.DeviceType</span><br />
+                <span>@l.Content</span>
+            </div>
+        </div>
+    }
+    <div id="pager">
+        @Html.Raw(ViewBag.Pager)
+    </div>
+</div>

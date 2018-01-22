@@ -1,0 +1,21 @@
+﻿@{
+    List<GuModel.Stock> stockList = ViewBag.StockList;
+    string startChar = "";
+    ViewBag.Title = "全部个股_一股一十";
+}
+<hr class="visible-xs" />
+<div style="border-bottom:1px solid #eee;">
+    <h2>全部个股</h2>
+</div>
+
+<div>
+    @foreach (var stock in stockList)
+    {
+        if (stock.PyAbbre.Substring(0, 1) != startChar)
+        {
+            startChar = stock.PyAbbre.Substring(0, 1);
+            <div style="border-bottom:1px solid #eee;line-height:30px;margin-bottom:10px;">@(startChar)</div>  
+        }
+        <span style="margin-right:10px;"><a href="/guba/@stock.StockCode">@(stock.StockName)(@stock.StockCode)</a></span>
+    }
+</div>

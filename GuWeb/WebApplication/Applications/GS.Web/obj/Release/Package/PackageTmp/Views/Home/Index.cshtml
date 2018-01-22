@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>一股一十 - 交流、讨论和学习炒股经验</title>
+    <meta name="description" content="股民交流炒股经验和讨论个股的社区，学习炒股知识、提高炒股技能，寻找真正的炒股高手。" />
+    <link href="~/Content/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/css/form-wrapper.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="~/Content/jquery-ui/jquery-ui.min.css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <meta property="qc:admins" content="1563356743017756375" />
+</head>
+<body>
+    <div class="container" style="max-width:660px;">
+        <div style="height:90px;" id="index-placeholder"></div>
+        <div class="form-group">
+            <div style="text-align:center;">
+                <h1 class="logo">一股一十</h1>
+            </div>
+            <div style="text-align:center">
+                <div class="form-group mark-width" style="position:relative;">
+                    <input type="text" class="form-control kw" style="float:left;height:35px;width:100%;" placeholder="输入股票代码、名称或拼音">
+                    <button type="button" class="search index-search">进入股吧</button>
+                </div>
+                <input type="hidden" id="isindex" value="1" />
+            </div>
+        </div>
+        <div style="height:370px;">
+            <div style="padding:30px 0;display:inline-block;">
+                <ul class="hottag">
+                    <li><label>热门股吧:</label></li>
+                    <li><a href="http://www.nichaogu.com/guba/000000">大盘吧</a></li>
+                    <li><a href="http://www.nichaogu.com/guba/666666">实盘吧</a></li>
+                    <li><a href="http://www.nichaogu.com/weibo/@ViewBag.d">股友微博</a></li>
+                    <li><a href="http://www.nichaogu.com/stock/stocklist">全部个股</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer style="margin-bottom:30px;width:100%;text-align:center;">
+            <span>&copy;2016 · </span>
+            <span><a href="http://www.nichaogu.com/">一股一十</a> | </span>
+            <span><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备14039095号-4</a></span>
+        </footer>
+    </div>
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Content/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/Utilities.js"></script>
+    <script src="~/Scripts/searchPartial.js"></script>
+    <script src="~/Content/jquery-ui/jquery-ui.min.js"></script>
+</body>
+</html>
+<script>
+    $(function () {
+        var width = $(document).width();
+        if (width < 700) $("#index-placeholder").css("height", 0);
+    });
+</script>

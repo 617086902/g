@@ -1,0 +1,97 @@
+﻿
+@{
+}
+
+<div id="wbcontainer" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="dpcontainer" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+@section scripts{
+    <script src="~/Content/Highcharts/highcharts.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.get("/stock/GetStockSpLineData", function (data) {
+                var xStr = new Array();
+                var wData = new Array();
+                var sData = new Array();
+                var bData = new Array();
+                var wbdata = [
+                    { name: "微博热度", data: wData },
+                    //{ name: "大盘指数", data: sData },
+                    //{ name: "对比", data: bData },
+                ]
+                var dpdata = [
+                    //{ name: "微博热度", data: wData },
+                    { name: "大盘指数", data: sData },
+                    //{ name: "对比", data: bData },
+                ]
+                for (var i = 0; i < data.data.length; i++) {
+                    xStr[i] = data.data[i].DateStr;
+                    var sd = data.data[i].Data.split(',');
+                    wData[i] = parseFloat(sd[0]);
+                    sData[i] = parseFloat(sd[1]);
+                    bData[i] = parseFloat(sd[2]);
+                }
+                $('#wbcontainer').highcharts({
+                    chart: {
+                        type: 'spline'
+                    },
+                    title: {
+                        text: '微博热度走势图'
+                    },
+                    subtitle: {
+                        text: '最近一个月开盘日微博相关发帖数数据展示'
+                    },
+                    xAxis: {
+                        categories: xStr
+                    },
+                    yAxis: {
+                        title: {
+                            text: '热度'
+                        },
+                        
+                        min: 0
+                    },                    
+                    plotOptions: {
+                        spline: {
+                            marker: {
+                                enabled: true
+                            }
+                        }
+                    },
+                    series: wbdata,
+                });
+
+                console.log(dpdata)
+                $('#dpcontainer').highcharts({
+                    chart: {
+                        type: 'spline'
+                    },
+                    title: {
+                        text: '大盘指数走势图'
+                    },
+                    subtitle: {
+                        text: '最近一个月大盘指数'
+                    },
+                    xAxis: {
+                        categories: xStr
+                    },
+                    yAxis: {
+                        title: {
+                            text: '大盘指数'
+                        },
+                    },
+                    plotOptions: {
+                        spline: {
+                            marker: {
+                                enabled: true
+                            }
+                        }
+                    },
+                    series: dpdata,
+                });
+            });
+        });
+
+    </script>
+}

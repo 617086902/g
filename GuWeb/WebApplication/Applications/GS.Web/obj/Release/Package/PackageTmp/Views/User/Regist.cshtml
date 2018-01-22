@@ -1,0 +1,79 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>一股一十 - 交流、讨论和学习炒股经验</title>
+    <meta name="description" content="股民交流、问答社区，寻找牛人大神，学习炒股知识、提高炒股技能，从此不再做山顶站岗人。" />
+    <link href="~/Content/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/css/form-wrapper.css" rel="stylesheet" />
+</head>
+<body>
+    <form>
+        @*step01*@
+        <div class="container" style="max-width:330px;">
+            <div class="form-group">
+                <div style="text-align:center;">
+                    <h1 class="logo">一股一十</h1>
+                    <h2 class="h2">十年炒股两茫茫，不思量，自难忘</h2>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="text-align:center;">
+                    <a href="javascript:;" style="font-size: 18px;margin-right:20px;">注册</a>
+                    <a href="login" style="color:gray;font-size: 18px;">登录</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="姓名" maxlength="20">
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" id="userAccount" placeholder="手机号（仅中国大陆）或邮箱" maxlength="30">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="passCode" placeholder="密码（不少于6位）" maxlength="20">
+            </div>
+            <div class="form-group" style="position:relative;">
+                <input type="text" class="form-control" maxlength="4" id="validCode" placeholder="验证码">
+                <img class="img-thumbnail" id="changeImg" src="@Url.Action("GetCodeImg", "Common")?t=@DateTime.Now.Ticks" style="position:absolute;top:4px;right:5px;" title="看不清，点击换一张" />
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-info btn-lg btn-block" id="ensure">确认注册</button>
+            </div>
+            <div class="form-group">
+                <span>社交账号登陆：</span><a href="/qq/login" id="qqlogin"><img src="~/Content/img/Connect_logo_1.png" /></a>
+            </div>
+        </div>
+        @*step02*@
+        <div class="container" style="max-width:330px;display:none;">
+            <div class="form-group">
+                <p class="text-center input-wrapper"><h1>验证手机</h1></p>
+            </div>
+            <div class="form-group">
+                <p class="form-control-static">
+                    <label>注册账号</label>
+                    <label style="color:#555555;" id="regUserAccount"></label>
+                </p>
+            </div>
+            <div class="form-group" style="position:relative;">
+                <input type="tel" class="form-control" id="messageCode" maxlength="6" placeholder="手机或邮箱验证码">
+                <button type="button" class="btn btn-default" style="position:absolute;top:4px;right:5px;" id="sendmsg" disabled="disabled">正在发送..</button>
+            </div>
+            <div class="form-group">
+                <button type="button" id="presub" class="btn btn-info btn-lg btn-block">进入网站</button>
+            </div>
+        </div>
+        <div style="height:30px;"></div>
+    </form>
+    <footer class="hidden-xs" style="text-align:center;">
+        <span>&copy;2016<a href="http://www.nichaogu.com/">一股一十</a> · </span>
+        <span><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备14039095号-4</a></span>
+    </footer>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Utilities.js"></script>
+    <script src="~/Scripts/regist.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+﻿@using Core.Entities;
+@{
+    ViewBag.Title = Model.Post.Title + "_" + Model.StockName + "(" + Model.Post.StockCode + ")" + "股吧_一股一十";
+    <link href="~/Content/umeditor1_2_2-utf8-net/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="~/Content/umeditor1_2_2-utf8-net/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="~/Content/umeditor1_2_2-utf8-net/umeditor.min.js"></script>
+    <script type="text/javascript" src="~/Content/umeditor1_2_2-utf8-net/lang/zh-cn/zh-cn.js"></script>
+    <link href="~/Content/css/guba.css" type="text/css" rel="stylesheet" />
+    <script src="~/Scripts/jsrender.min.js"></script>
+    ViewBag.h = Model.StockName + "吧";
+    BaseUser user = Core.AppContext.Current.CurrentUser;
+    bool isLogin = user != null;
+    CommonService.Stocks.SinaStockData ssd = ViewBag.StockData as CommonService.Stocks.SinaStockData;
+}
+@model BusinessService.Entities.PostDetial
+@*页头*@
+<div class="hidden-xs">
+    <div style="border-bottom:1px solid #eee;">
+        <a class="bartop" href="/guba/@Model.Post.StockCode">@ViewBag.h</a>
+        <span style="margin-right:30px;">
+            &nbsp;&nbsp;@Model.Post.StockCode
+        </span>
+        <input type="hidden" value="@Model.Post.Id" id="postid" />
+
+        <span style="font-size:13px;color:gray;">
+            @if (ssd != null)
+            {
+                <span>当前价格：@ssd.currentPrice &nbsp;</span>
+                <span>涨跌幅：@ssd.increase &nbsp;</span>
+                <span>成交量：@ssd.totalNumber &nbsp;</span>
+                <span>成交额：@ssd.turnover &nbsp;</span>
+                <span>开盘价：@ssd.openningPrice &nbsp;</span>
+                <span>昨日收盘价：@ssd.closingPrice</span>
+            }
+        </span>
+    </div>
+</div>
+
+<div style="display:block;">
+    <div class="col-xs-12 col-sm-8 col-md-9">
+        @*标题*@
+        <div>
+            @if (ViewBag.IsFirst)
+            {
+                <div class="visible-xs comment-l-xs">
+                    <img src="@Model.ProfilePhoto" alt="profilephoto" class="img-thumbnail profilephoto">
+                    <span class="x-span">
+                        <span>@Model.UserName</span>
+                        <span class="floorhost-xs">楼主</span>
+                        <span class="level">LV.@Model.UserLevel</span>
+                        <a style="float:right;" class="reply-post">
+                            <img src="/Content/img/repat.png" alt="回复" style="width:20px;height:20px;" />
+                        </a>
+                        <br />
+                        <span style="color:#ccc;">@Model.ShowTime</span>
+                    </span>
+                </div>
+            }
+            <h1 class="t-h1">
+                @Model.Post.Title
+                <a href="javascript:;" style="font-size:13px;" id="like" data-postid="@Model.Post.Id" data-islike="true">[收藏]</a>
+            </h1>
+        </div>
+        @*帖子主题*@
+        @if (ViewBag.IsFirst)
+        {
+            <div>
+                <div id="postdetials" class="row comment-bg">
+                    <div class="col-xs-12 col-md-2 col-sm-3 col-lg-2" style="position:relative;">
+                        <div class="hidden-xs text-center comment-l">
+                            <img src="@Model.ProfilePhoto" alt="profilephoto" class="img-thumbnail">
+                            <span>@Model.UserName</span>
+                            <span style="color:gray;padding-top:0;font-size:10px;">@Model.LevelName LV.@Model.UserLevel</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-10 col-sm-9 col-lg-10" style="position:relative;">
+                        <div class="comment-contain">@Html.Raw(Model.Post.Content)</div>
+                        <div class="hidden-xs comment-contain-remark">
+                            楼主 &nbsp;@Model.ShowTime
+                            <a href="javascript:;" class="reply-post">回复</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @*评论列表*@
+        <div id="commentlist">
+        </div>
+        @*分页*@
+        <div id="pager">
+        </div>
+        @*评论*@
+        <div class="form-group row" style="border-top:1px solid #ccc;">
+            <input type="hidden" id="pcid" value="" />
+            <input type="hidden" id="toUserName" value="" />
+            <label style="line-height:35px;">发表回复</label><br />
+            <textarea id="commenteditor" style="width:100%;height:150px;"></textarea><br />
+            @if (isLogin)
+            {
+                <button type="button" class="btn btn-default" id="commentsubmit">发表回复</button>
+            }
+            else
+            {
+                <a href="/user/login?redirectURL=/guba/@Model.Post.StockCode" class="btn btn-default">请先登录</a>
+            }
+        </div>
+    </div>
+    <div class="hidden-xs col-sm-4 col-md-3">
+        <div>
+            @*分时图*@
+            @if (ssd != null)
+            {
+                <div style="line-height:40px;font-size:18px;">
+                    <span>最新行情</span>
+                </div>
+                <img style="max-width:90%;" class="img-thumbnail" src="@ssd.chatMin" alt="@ssd.name 分时线" />
+            }
+        </div>
+        @Html.Partial("_HotPost")
+    </div>
+</div>
+@*评论内容*@
+<script type="text/x-jsrender" id="commentdata">
+    {{for CommentData}}
+    <div class="row comment-bg">
+        <div class="col-xs-12 col-md-2 col-sm-3">
+            @*左栏*@
+            <div class="hidden-xs text-center comment-l">
+                <img src="{{:ProfilePhoto}}" alt="profilephoto" class="img-thumbnail">
+                <br />
+                <span>{{:UserName}}</span><br />
+                <span style="color:gray;padding-top:0;font-size:10px;">{{:LevelName}} LV.{{:UserLevel}}</span>
+                <br />&nbsp;
+            </div>
+            @*手机端展示*@
+            <div class="visible-xs comment-l-xs">
+                <img src="{{:ProfilePhoto}}" alt="profilephoto" class="img-thumbnail profilephoto">
+                <span class="x-span">
+                    {{:UserName}}
+                    <span class="level">LV.@Model.UserLevel</span>
+                    <a style="float:right;" class="reply" data-cid="{{:Comment.Id}}">
+                        <img src="/Content/img/repat.png" alt="回复" style="width:20px;height:20px;" />
+                    </a>
+                    <br />
+                    <span style="color:#ccc;">{{:CreatedDate}}</span>
+                </span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-10 col-sm-9" style="position:relative;">
+            <div class="comment-contain">{{:Comment.Content}}</div>
+            <div class="hidden-xs comment-contain-remark">
+                {{:Comment.Floor}}楼
+                {{:CreatedDate}}
+                <a href="javascript:;" class="reply" data-cid="{{:Comment.Id}}">回复</a>
+            </div>
+            {{if CommentReply.length>0}}
+            <div class="reply-comment">
+                {{for CommentReply}}
+                <span>
+                    {{:UserName}}:{{:Comment.Content}}&nbsp;{{:CreatedDate}}
+                    <a href="javascript:;" class="reply-c" data-cid="{{:Comment.ParentCommentId}}" data-cname="{{:UserName}}">回复</a>
+                </span>
+                {{/for}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    {{/for}}
+</script>
+<script src="~/Scripts/utilities.js"></script>
+<script src="~/Scripts/postdetials.js"></script>

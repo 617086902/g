@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CompanyProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LegalName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EnglishName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EstablishDate" Type="DateTime" Precision="3" />
+    <Property Name="OwnedIndustry" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegisteredCapital" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IssuePrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EmployeesCount" Type="Int32" />
+    <Property Name="LegalPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OfficeAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ListingDate" Type="DateTime" Precision="3" />
+    <Property Name="BusinessScope" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Profile" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ListedMarket" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StockName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PyFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PyAbbre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PassCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Nickname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Realname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProfilePhoto" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Contry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="GSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CompanyProfile" EntityType="Self.CompanyProfile" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="UserInformation" EntityType="Self.UserInformation" />
+    <EntitySet Name="Comment" EntityType="GuModel.Comment" />
+    <EntitySet Name="Post" EntityType="GuModel.Post" />
+    <EntitySet Name="UserLike" EntityType="GuModel.UserLike" />
+    <EntitySet Name="UserLevel" EntityType="GuModel.UserLevel" />
+    <EntitySet Name="UserAccount" EntityType="GuModel.UserAccount" />
+    <EntitySet Name="ThirdPartyAccount" EntityType="GuModel.ThirdPartyAccount" />
+  </EntityContainer>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostId" Type="Int32" Nullable="false" />
+    <Property Name="ParentCommentId" Type="Int32" Nullable="false" />
+    <Property Name="ToUserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Floor" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockCode" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsBoutique" Type="Boolean" Nullable="false" />
+    <Property Name="IsTop" Type="Boolean" Nullable="false" />
+    <Property Name="HotValue" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLike">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TargetId" Type="Int32" Nullable="false" />
+    <Property Name="TargetType" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLevel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LevelNum" Type="Int32" Nullable="false" />
+    <Property Name="LevelName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LevelScore" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MoneyValue" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ScoreValue" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="UserLevel" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifyBy" Type="Int32" />
+    <Property Name="ModifyOn" Type="DateTime" Precision="3" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThirdPartyAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OpenId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AccountType" Type="Int32" />
+    <Property Name="AuthDate" Type="DateTime" Precision="3" />
+    <Property Name="Deleted" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

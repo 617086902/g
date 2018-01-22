@@ -1,0 +1,162 @@
+﻿.t-h1 {
+    font-size: 20px;
+    color: #333;
+    font-family: "Microsoft Yahei",STHeiti,Arial,SimSun;
+    margin: 10px 0;
+}
+
+.bartop {
+    font-size: 30px;
+    color: #333;
+    margin: 0 5px;
+}
+
+.post-content {
+    width: 100%;
+    color: #333;
+    font-size: 14px;
+}
+
+    .post-content img {
+        width: 50px;
+        max-height: 100px;
+    }
+
+.post-list {
+    /*margin-bottom: 20px;*/
+}
+
+.commont-count {
+    background: #F0F0F0;
+    color: #698ebf;
+    border-radius: 3px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    line-height: 24px;
+    margin-top: 2px;
+    width: 50px;
+}
+
+.x-commont-count {
+    background: #fff;
+    color: gray;
+    border-radius: 3px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    line-height: 17px;
+    margin-top: 2px;
+    width: 40px;
+}
+
+.profilephoto {
+    width: 10%;
+    max-width: 50px;
+    max-height: 50px;
+    float: left;
+}
+
+.x-span {
+    padding-left: 7px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    width: 90%;
+}
+
+    .x-span a {
+        font-size: 14px;
+        color: #333;
+    }
+
+.post-title {
+    line-height: 30px;
+}
+
+    .post-title a {
+        font-size: 16px;
+        font-family: "Microsoft Yahei",STHeiti,Arial,SimSun;
+        color: #259;
+    }
+
+    .post-title span {
+        font-size: 12px;
+        color: gray;
+        float: right;
+    }
+
+.comment-l {
+    padding-top: 15px;
+    /*background: #fbfbfb;*/
+    /*background:url("/Content/img/bg_l.jpg") repeat-y;*/
+    height: 100%;
+    width: 100px;
+    min-width: 100px;
+}
+
+    .comment-l img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .comment-l span {
+        display: inline-block;
+        font-size: 13px;
+        padding-top: 12px;
+    }
+
+.comment-l-xs {
+    padding-top: 15px;
+}
+
+.comment-contain {
+    padding-top: 10px;
+}
+
+    .comment-contain img {
+        max-width: 100%;
+    }
+
+.floorhost-xs {
+    background: #698ebf;
+    color: #fff;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.level {
+    background: #FF8C00;
+    color: #fff;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.comment-contain-remark {
+    text-align: right;
+    float: right;
+    color: gray;
+    font-size: 12px;
+    line-height: 30px;
+    width: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.comment-bg {
+    border-top: 1px solid #eee;
+}
+
+.reply-comment {
+    padding: 10px;
+    background: #f7f7f7;
+    font-size: 13px;
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+    .reply-comment span {
+        display: inline-block;
+        width: 100%;
+    }

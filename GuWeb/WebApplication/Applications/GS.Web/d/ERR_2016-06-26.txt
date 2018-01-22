@@ -1,0 +1,3 @@
+﻿   在 TF.BitterMelon.Tool.UnicodeHelper.UnicodeToString(String str)
+   在 TF.BitterMelon.AnalogLogin.SinaWeibo.WeiboSearch.GetWeiboContent(String keyword, Int32 pageIndex, Int32& count, DateTime date)
+   在 CommonService.Weibo.WeiboHelper.Get(DateTime date)

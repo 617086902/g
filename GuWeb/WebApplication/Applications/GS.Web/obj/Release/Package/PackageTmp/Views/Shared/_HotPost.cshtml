@@ -1,0 +1,23 @@
+﻿<div style="line-height:40px;font-size:18px;">
+    <span>热门帖子</span>
+</div>
+<div id="hotpostlist">
+
+</div>
+<script type="text/x-jsrender" id="hotpost">
+    <ul style="list-style:none;margin:0;padding:0;font-size:14px;line-height:20px;font-family:'Microsoft Yahei',STHeiti,Arial,SimSun;">
+        {{for data}}
+        <li><a style="color:#333;" href="/guba/{{:StockCode}}">{{:GubaName}}吧</a>&nbsp;<a href="/p/{{:PostId}}">{{:PostTitle}}</a></li>
+        {{/for}}
+    </ul>
+</script>
+<script>
+    $(function () {
+        $.get("/post/gethotpost", { topN: 10, stockCode: "" }, function (data) {
+            if (data && data.code == 0) {
+                var template = $.templates("#hotpost").render(data);
+                $("#hotpostlist").append(template);
+            }
+        });
+    });
+</script>

@@ -1,0 +1,39 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data"#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.xml" #>
+<#@ import namespace="System.Data"#>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+using System;
+namespace AModel.Entities
+{
+<# string connectionString  = "user id=3e21_read;data source=118.144.91.56;persist security info=True;initial catalog=3e21erp;password=Ruesaedr8123@bh010;";
+SqlConnection conn = new SqlConnection(connectionString);
+conn.Open();
+System.Data.DataTable schema = conn.GetSchema("TABLES");
+string selectQuery = "select * from @tableName";
+SqlCommand command = new SqlCommand(selectQuery,conn);
+SqlDataAdapter ad = new SqlDataAdapter(command);
+System.Data.DataSet ds = new DataSet();        
+foreach(System.Data.DataRow row in schema.Rows)
+{ 
+	if(row["TABLE_NAME"].ToString().StartsWith("@")||row["TABLE_NAME"].ToString()=="site_3e212")continue; #>  
+	public class <#= row["TABLE_NAME"].ToString() #>  
+	{    
+	<# ds.Tables.Clear();
+	command.CommandText = selectQuery.Replace("@tableName",row["TABLE_NAME"].ToString());
+	ad.FillSchema(ds, SchemaType.Mapped, row["TABLE_NAME"].ToString());         
+	foreach (DataColumn dc in ds.Tables[0].Columns)
+	{
+	#>
+	public <#= dc.DataType.Name #> <#= dc.ColumnName #>{ get; set; }   
+	<# 
+	}  
+	#>         
+	}
+<# } #>
+}
